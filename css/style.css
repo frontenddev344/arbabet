@@ -549,15 +549,15 @@ header.site-header.sticky {
 }
 .commoncard-inner {
   margin-bottom: 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 20px;
 }
 .commoncard-inner img {
-  height: 350px;
+  height: 250px;
   object-fit: cover;
 }
-
-.commomcard-main {
+.commoncard-content {
   display: flex;
-  margin-bottom: 30px;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;

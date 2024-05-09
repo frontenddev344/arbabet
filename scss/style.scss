@@ -1,0 +1,490 @@
+/*global start*/
+@import 'mixins';
+@import 'variables';
+@import 'typography';
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    overflow-x: hidden;
+    font-size: 1.6rem;
+    font-family: "Sedan SC", serif;
+    background-color: $clr-pista;
+}
+
+div#cursor {
+    background: $clr-yellow;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: all 0.1s linear;
+    pointer-events: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:focus {
+    color: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/*global end*/
+
+/*header start*/
+header.site-header {
+    background: $clr-pista;
+    font-size: 18px;
+    padding: 0;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: $clr-black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    width: 100%;
+    transition: .3s;
+}
+
+header.site-header.sticky {
+    background: $clr-pista;
+    // box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.3);
+    animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+    padding: 0;
+    position: fixed;
+}
+
+.site-header .site-nav ul li a.active {
+    border-bottom: 2px solid $clr-black;
+}
+
+.site-logo img {
+    width: 100%;
+    max-width: 300px;
+}
+
+.site-nav a {
+    padding: 8px 12px !important;
+    display: inline-block;
+    font-weight: 500;
+
+    &:hover {
+        color: $clr-yellow;
+    }
+}
+
+
+.site-header {
+    padding: 10px 0;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-nav ul {
+    display: flex;
+    align-items: center;
+}
+
+.closed-menu {
+    display: none;
+}
+
+.menu-toggle {
+    display: none !important;
+}
+
+
+
+/*header end*/
+
+
+
+/*footer-css-start*/
+.footer {
+    background: $clr-black;
+    padding: 50px 0;
+
+    &-logo {
+        img {
+            max-width: 250px;
+        }
+    }
+
+    &-links {
+        h2 {
+            color: $clr-pista;
+        }
+
+        h3 {
+            color: $clr-pista;
+            font-size: 25px;
+        }
+
+        li a {
+            color: $clr-pista;
+
+            &:hover {
+                color: $clr-yellow;
+            }
+        }
+    }
+
+    &-adresse {
+        h2 {
+            color: $clr-pista;
+        }
+
+        h3 {
+            color: $clr-pista;
+            font-size: 25px;
+        }
+
+        p {
+            color: $clr-pista;
+        }
+    }
+
+    &-mails {
+
+        a,
+        i {
+            color: $clr-pista;
+            font-size: 21px;
+
+            &:hover {
+                color: $clr-yellow;
+            }
+        }
+
+    }
+}
+
+.social-signals {
+    padding: 25px 0;
+
+    i {
+        color: $clr-pista;
+        font-size: 24px;
+        text-align: center;
+        line-height: 40px;
+        margin: 0 10px;
+        border: 1px solid $clr-pista;
+        border-radius: 30px;
+        height: 40px;
+        width: 40px;
+        transition: .3s linear;
+
+        &:hover {
+            transform: translateY(-10px);
+            color: $clr-pista;
+        }
+    }
+}
+
+/*footer-css-end*/
+
+/*Contact start*/
+.contactbanner.banner {
+    background-image: url(../images/contactbanner.jpg);
+    text-align: center;
+    position: relative;
+}
+
+.contact-form .about_us_content {
+    margin: 0 0 30px 0;
+
+    h2 {
+        margin: 30px 0 !important;
+    }
+}
+
+.contact-form .form-group {
+    margin-bottom: 2rem;
+}
+
+.contact-form .input-control {
+    display: block;
+    width: 100%;
+    height: 4rem;
+    border: 1px solid $clr-black;
+    padding: 2rem 2rem;
+    background: transparent;
+    color: $clr-black;
+}
+
+.contact-form .input-control:focus-visible {
+    outline: none;
+}
+
+.contact-form textarea.input-control {
+    resize: none;
+    height: auto;
+}
+
+.contact-form .form-group .submit-btn {
+    background: $clr-black;
+    border: 1px solid $clr-black;
+    transition: all 0.2s linear;
+    display: inline-block;
+    padding: 0.8rem 4rem;
+    color: $clr-white;
+    text-transform: capitalize;
+
+    &:hover {
+        background-color: transparent;
+        color: $clr-black;
+    }
+}
+
+.contact-form .form-group label {
+    display: inline-block;
+    padding-bottom: 5px;
+    color: $clr-black;
+    transition: all 0.2s linear;
+    text-transform: capitalize;
+    font-size: 18px;
+
+}
+
+/*Contact end*/
+
+/*privacy-policy start*/
+.privacy__section.banner {
+    background-image: url(../images/privacybanner.avif);
+    text-align: center;
+    position: relative;
+    background-position: top;
+}
+
+.privacy-policy {
+    padding: 40px 0;
+
+    .content-wrap {
+        li {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: normal;
+            color: $clr-black;
+        }
+    }
+}
+
+
+
+.content-wrap {
+    h4 {
+        margin-bottom: 0;
+        font-weight: 600;
+    }
+
+    p {
+        color: $clr-black;
+        font-size: 16px;
+    }
+
+    li {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: normal;
+        color: $clr-black;
+        font-family: math;
+    }
+}
+
+/*privacy-policy end*/
+
+/*terms-conditon start*/
+.terms__section.banner {
+    background-image: url(../images/termsbanner.avif);
+    text-align: center;
+    position: relative;
+}
+
+.terms {
+    padding: 40px 0;
+
+    .content-wrap {
+        li {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: normal;
+            font-family: math;
+        }
+
+        p {
+            color: $clr-black;
+        }
+
+    }
+}
+
+/*terms-conditon-end/
+
+/*home-css-start*/
+.homebanner.banner {
+    background-image: url(../images/homebanner.jpg);
+    height: 600px;
+    position: relative;
+
+    &::after {
+        height: 600px;
+    }
+}
+
+.toptext {
+    padding: 50px 0;
+}
+
+.bottomtext-content {
+    padding: 0 0 50px 0;
+}
+
+.compare {
+    margin: 0 0 30px;
+}
+
+.detail {
+    &-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+    }
+
+    &-main {
+        position: relative;
+    }
+
+    &-picture {
+        img {
+            width: 100%;
+            max-width: 100%;
+            height: 450px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+    }
+}
+
+.spinner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+
+.lds-roller {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    background: $clr-yellow;
+    border-radius: 100%;
+    border: 3px solid $clr-yellow;
+    animation: rotate-cirle 5s linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+        margin: 0;
+        font-size: 25px;
+        color: $clr-white;
+    }
+}
+
+@keyframes lds-roller {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-cirle {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.content__section.destiantions {
+    white-space: nowrap;
+    overflow-y: hidden;
+    padding: 20px 0;
+    margin: 20px 0;
+}
+
+.content__section.destiantions::-webkit-scrollbar {
+    display: none;
+}
+
+.content__section.destiantions p {
+    animation-name: infite-scroll;
+    margin: 0;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    color: $clr-yellow;
+    font-size: 75px;
+    display: inline-block;
+}
+
+@keyframes infite-scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/*home-css-end*/
+/*# sourceMappingURL=style.css.map */

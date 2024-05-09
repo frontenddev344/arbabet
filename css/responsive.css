@@ -1,0 +1,260 @@
+li {
+  list-style: none;
+}
+
+a,
+button {
+  font-family: "Sedan SC";
+}
+
+.banner {
+  height: 450px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 50px;
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.61);
+  z-index: 0;
+  height: 450px;
+}
+
+.bannertitle {
+  z-index: 1;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+
+p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 25px;
+  color: #635756;
+  font-family: math;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+}
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 575px) {
+  h1 {
+    font-size: 35px;
+  }
+}
+
+h2 {
+  font-size: 55px;
+  line-height: normal;
+  font-weight: 500;
+}
+@media screen and (max-width: 1024px) {
+  h2 {
+    font-size: 35px;
+  }
+}
+
+h3 {
+  font-size: 36px;
+  line-height: normal;
+  letter-spacing: 1px;
+  color: #62c3c9;
+}
+@media screen and (max-width: 1024px) {
+  h3 {
+    font-size: 25px;
+  }
+}
+
+h4 {
+  font-size: 23px;
+  line-height: normal;
+  color: #d8a01d;
+}
+
+/*media queries start*/
+@media screen and (max-width: 1199px) {
+  .container {
+    padding: 0 20px;
+  }
+  .site-logo img {
+    max-width: 180px;
+  }
+  .site-nav a {
+    display: inline-block;
+  }
+  .site-nav li {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .site-nav a {
+    display: inline-block;
+    padding: 8px 9px;
+  }
+  .site-nav li {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 991px) {
+  /*header start*/
+  .site-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    background: #12232E;
+    transition: 0.4s cubic-bezier(0, 0, 0.13, 0.61);
+    transform: translateX(-100%);
+  }
+  .site-nav ul {
+    display: block;
+    padding: 75px 60px 0;
+    display: inline-block !important;
+  }
+  .menu-toggle {
+    display: block !important;
+    cursor: pointer;
+  }
+  .closed-menu {
+    font-size: 40px;
+    color: #fff;
+    position: absolute;
+    top: -5px;
+    right: 15px;
+    display: inline-block;
+  }
+  .closed-menu a:hover {
+    color: #fff;
+  }
+  .closed-menu {
+    display: block;
+  }
+  .toggle .site-nav {
+    transform: translateX(0);
+  }
+  .closed-menu {
+    display: block;
+  }
+  .site-header {
+    padding: 20px 0;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 9999999;
+    transition: all 0.5s linear;
+  }
+  .site-header .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .site-logo img {
+    max-width: 20rem;
+  }
+  .site-nav ul {
+    display: flex !important;
+    flex-direction: column;
+    align-items: baseline;
+  }
+  .site-nav li a {
+    font-size: 17px;
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    text-transform: capitalize;
+    color: #fff;
+    position: relative;
+    white-space: nowrap;
+  }
+  .site-nav li a:hover::after {
+    width: 100%;
+    transition: all 0.3s linear;
+  }
+  .site-nav .closed-menu a {
+    font-size: 45px;
+    color: #d8a01d;
+  }
+  .menu-toggle .bar-1,
+  .bar-2,
+  .bar-3 {
+    width: 2.5rem;
+    height: 2px;
+    background-color: #d8a01d;
+    margin: 0.6rem 0;
+    transition: all 0.3s linear;
+    display: block;
+  }
+  ul.dropdown-content {
+    position: absolute;
+    width: 250px;
+    background: transparent;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    display: none;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .bar-2 {
+    width: 30px;
+  }
+  .bd-header-top__meta span {
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: 400;
+  }
+  .bd-header-top__meta a {
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: 600;
+    opacity: 0.7;
+  }
+  nav.site-nav {
+    max-width: unset;
+    margin: unset;
+  }
+}
+@media screen and (max-width: 767px) {
+  .detail-content {
+    margin-bottom: 18px;
+  }
+  .bannertitle {
+    width: 100%;
+  }
+  .spinner {
+    display: none;
+  }
+}
+@media screen and (max-width: 575px) {
+  .site-nav {
+    width: 100%;
+  }
+}
+
+
+/*# sourceMappingURL=responsive.css.map */

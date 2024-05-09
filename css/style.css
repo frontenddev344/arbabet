@@ -557,7 +557,6 @@ header.site-header.sticky {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 100%;
 }
 .commoncard-inner img {

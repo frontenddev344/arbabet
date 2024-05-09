@@ -568,6 +568,13 @@ header.site-header.sticky {
   position: relative;
 }
 
+h5.card-title {
+  font-size: 35px;
+  color: #62c3c9;
+  text-align: center;
+  margin: 30px 0;
+}
+
 /*macua-css-end*/
 /*lasvegas-css-start*/
 .lasvegasbanner.banner {

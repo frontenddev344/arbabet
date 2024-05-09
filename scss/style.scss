@@ -539,6 +539,13 @@ header.site-header.sticky {
     position: relative;
 }
 
+h5.card-title {
+    font-size: 35px;
+    color: $clr-green;
+    text-align: center;
+    margin: 30px 0;
+}
+
 /*macua-css-end*/
 
 /*lasvegas-css-start*/
@@ -546,6 +553,7 @@ header.site-header.sticky {
     background-image: url(../images/lasvegasbanner.jpg);
     position: relative;
 }
+
 /*lasvegas-css-end*/
 
 /*montearlo-css-start*/
@@ -553,14 +561,16 @@ header.site-header.sticky {
     background-image: url(../images/montecarlobanner.jpg);
     position: relative;
 }
+
 /*montearlo-css-end*/
 
 
 /*atlantic-css-start*/
-.atlanticbanner.banner{
+.atlanticbanner.banner {
     background-image: url(../images/atlanticabanner.jpg);
     position: relative;
 }
+
 /*atlantic-css-end*/
 
 /*# sourceMappingURL=style.css.map */

@@ -18,6 +18,28 @@ button {
     margin-top: 50px;
 }
 
+.primary-btn {
+    display: inline-block;
+    color: $clr-pista;
+    font-size: 18px;
+    background: $clr-green;
+    padding: 8px 40px;
+    text-align: center;
+
+    a {
+        color: $clr-pista;
+    }
+
+    &:hover {
+        background-color: $clr-yellow;
+    }
+}
+
+.commomcards {
+    background: $clr-creme;
+    padding: 50px 0;
+}
+
 .banner::after {
     content: "";
     position: absolute;

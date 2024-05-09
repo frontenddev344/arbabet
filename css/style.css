@@ -90,7 +90,7 @@ h2 {
 }
 
 h3 {
-  font-size: 36px;
+  font-size: 26px;
   line-height: normal;
   letter-spacing: 1px;
   color: #62c3c9;
@@ -569,6 +569,27 @@ header.site-header.sticky {
 }
 
 /*macua-css-end*/
+/*lasvegas-css-start*/
+.lasvegasbanner.banner {
+  background-image: url(../images/lasvegasbanner.jpg);
+  position: relative;
+}
+
+/*lasvegas-css-end*/
+/*montearlo-css-start*/
+.montebanner.banner {
+  background-image: url(../images/montecarlobanner.jpg);
+  position: relative;
+}
+
+/*montearlo-css-end*/
+/*atlantic-css-start*/
+.atlanticbanner.banner {
+  background-image: url(../images/atlanticabanner.jpg);
+  position: relative;
+}
+
+/*atlantic-css-end*/
 
 
 /*# sourceMappingURL=style.css.map */

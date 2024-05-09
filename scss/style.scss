@@ -517,6 +517,11 @@ header.site-header.sticky {
         margin-bottom: 30px;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         padding: 20px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
 
         img {
             height: 250px;
@@ -524,15 +529,11 @@ header.site-header.sticky {
         }
     }
 
-    &-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
-    }
 }
 
-
+.commoncard-main {
+    height: 100%;
+}
 
 .macuabanner.banner {
     background-image: url(../images/macuabanner.jpg);

@@ -354,6 +354,11 @@ header.site-header.sticky {
   font-size: 18px;
 }
 
+section.contact__text.contact-form .row {
+  justify-content: center;
+  display: flex;
+}
+
 /*Contact end*/
 /*privacy-policy start*/
 .privacy__section.banner {
@@ -525,7 +530,7 @@ header.site-header.sticky {
 .content__section.destiantions p {
   animation-name: infite-scroll;
   margin: 0;
-  animation-duration: 6s;
+  animation-duration: 10s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   color: #d8a01d;
@@ -550,6 +555,12 @@ header.site-header.sticky {
 .commoncard {
   background: #EFE7D0;
   padding: 50px 0;
+}
+.commoncard-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 .commoncard-inner {
   margin-bottom: 30px;
